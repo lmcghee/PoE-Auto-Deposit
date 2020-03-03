@@ -43,7 +43,7 @@ j := 0
 
 ^Space::
     Sleep, 500
-    currentTab := GoToTab(1, 20)
+    currentTab := GoToTab(1, 50)
     Loop, 5 {
         Loop, 12 {
             MouseMove, (x1 + (j * xSize)), (y1 + (i * ySize)), 0
