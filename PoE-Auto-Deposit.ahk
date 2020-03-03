@@ -43,7 +43,7 @@ j := 0
 
 ^Space::
     Sleep, 500
-    currentTab := GoToTab(1, 50)
+    currentTab := GoToTab(1, 50) ; Go left 50 times in case the stash isn't on the leftmost tab.
     Loop, 5 {
         Loop, 12 {
             MouseMove, (x1 + (j * xSize)), (y1 + (i * ySize)), 0
