@@ -8,6 +8,8 @@
 ;; =============
 ;; USER CONFIG
 ;; =============
+;; NOTE: Set values to 0 if the tab is unused/unowned
+
 currencyTab := 1
 mapTab := 2
 divTab := 3
@@ -17,8 +19,8 @@ dumpTab := 0
 chaosRecipeTab := 0
 newOrbs := 1
 
-baseSpeedMS := 50
-jitterMaxMS := 50
+baseSpeedMS := 25
+jitterMaxMS := 25
 ;; =============
 ;; END CONFIG
 ;; =============
@@ -27,7 +29,7 @@ jitterMaxMS := 50
 CoordMode, Pixel, Screen
 CoordMode, Mouse, Screen
 
-stash := { "Divine Vessel": splinterTab, "Rarity: Normal`r`nMortal": splinterTab, "Offering to the Goddess": splinterTab, "Scarab": splinterTab, "Essence of": essenceTab, "Remnant of": essenceTab, "Splinter": splinterTab,   "Rarity: Divination Card": divTab, "Rarity: Normal`r`nSacrifice at": splinterTab, "Map`r`n--------`r`nMap Tier": mapTab, "Currency`r`nScroll Fragment":currencyTab,"Currency`r`nScroll of Wisdom":currencyTab,"Currency`r`nPortal Scroll":currencyTab,"Currency`r`nBlacksmith's Whetstone":currencyTab,"Currency`r`nArmourer's Scrap":currencyTab,"Currency`r`nGlassblower's Bauble":currencyTab,"Currency`r`nGemcutter's Prism":currencyTab,"Currency`r`nCartographer's Chisel":currencyTab,"Currency`r`nOrb of Transmutation":currencyTab,"Currency`r`nTransmutation Shard":currencyTab,"Currency`r`nOrb of Alteration":currencyTab,"Currency`r`nAlteration Shard":currencyTab,"Currency`r`nOrb of Annulment":currencyTab,"Currency`r`nAnnulment Shard":currencyTab,"Currency`r`nOrb of Chance":currencyTab,"Currency`r`nOrb of Augmentation":currencyTab,"Currency`r`nExalted Orb":currencyTab,"Currency`r`nExalted Shard":currencyTab,"Currency`r`nRegal Orb":currencyTab,"Currency`r`nRegal Shard":currencyTab,"Currency`r`nOrb of Alchemy":currencyTab,"Currency`r`nAlchemy Shard":currencyTab,"Currency`r`nChaos Orb":currencyTab,"Currency`r`nChaos Shard":currencyTab,"Currency`r`nBlessed Orb":currencyTab,"Currency`r`nDivine Orb":currencyTab,"Currency`r`nJeweller's Orb":currencyTab,"Currency`r`nOrb of Fusing":currencyTab,"Currency`r`nChromatic Orb":currencyTab,"Currency`r`nOrb of Scouring":currencyTab,"Currency`r`nOrb of Regret":currencyTab,"Currency`r`nVaal Orb":currencyTab,"Currency`r`nOrb of Horizons":currencyTab,"Currency`r`nPerandus Coin":currencyTab,"Currency`r`nSilver Coin":currencyTab,"Currency`r`nSimple Sextant":currencyTab,"Currency`r`nPrime Sextant":currencyTab,"Currency`r`nAwakened Sextant":currencyTab,"Currency`r`nHorizon Shard":currencyTab,"Currency`r`nOrb of Binding":currencyTab,"Currency`r`nEngineer's Orb":currencyTab,"Currency`r`nAncient Orb":currencyTab,"Currency`r`nAncient Shard":currencyTab,"Currency`r`nBinding Shard":currencyTab,"Currency`r`nEngineer's Shard":currencyTabl, "--------`r`nUnidentified":chaosRecipeTab, "Delirium Orb":newOrbs}
+stashTabDefinitions := { "Divine Vessel": splinterTab, "Rarity: Normal`r`nMortal": splinterTab, "Offering to the Goddess": splinterTab, "Scarab": splinterTab, "Essence of": essenceTab, "Remnant of": essenceTab, "Splinter": splinterTab,   "Rarity: Divination Card": divTab, "Rarity: Normal`r`nSacrifice at": splinterTab, "Map`r`n--------`r`nMap Tier": mapTab, "Currency`r`nScroll Fragment":currencyTab,"Currency`r`nScroll of Wisdom":currencyTab,"Currency`r`nPortal Scroll":currencyTab,"Currency`r`nBlacksmith's Whetstone":currencyTab,"Currency`r`nArmourer's Scrap":currencyTab,"Currency`r`nGlassblower's Bauble":currencyTab,"Currency`r`nGemcutter's Prism":currencyTab,"Currency`r`nCartographer's Chisel":currencyTab,"Currency`r`nOrb of Transmutation":currencyTab,"Currency`r`nTransmutation Shard":currencyTab,"Currency`r`nOrb of Alteration":currencyTab,"Currency`r`nAlteration Shard":currencyTab,"Currency`r`nOrb of Annulment":currencyTab,"Currency`r`nAnnulment Shard":currencyTab,"Currency`r`nOrb of Chance":currencyTab,"Currency`r`nOrb of Augmentation":currencyTab,"Currency`r`nExalted Orb":currencyTab,"Currency`r`nExalted Shard":currencyTab,"Currency`r`nRegal Orb":currencyTab,"Currency`r`nRegal Shard":currencyTab,"Currency`r`nOrb of Alchemy":currencyTab,"Currency`r`nAlchemy Shard":currencyTab,"Currency`r`nChaos Orb":currencyTab,"Currency`r`nChaos Shard":currencyTab,"Currency`r`nBlessed Orb":currencyTab,"Currency`r`nDivine Orb":currencyTab,"Currency`r`nJeweller's Orb":currencyTab,"Currency`r`nOrb of Fusing":currencyTab,"Currency`r`nChromatic Orb":currencyTab,"Currency`r`nOrb of Scouring":currencyTab,"Currency`r`nOrb of Regret":currencyTab,"Currency`r`nVaal Orb":currencyTab,"Currency`r`nOrb of Horizons":currencyTab,"Currency`r`nPerandus Coin":currencyTab,"Currency`r`nSilver Coin":currencyTab,"Currency`r`nSimple Sextant":currencyTab,"Currency`r`nPrime Sextant":currencyTab,"Currency`r`nAwakened Sextant":currencyTab,"Currency`r`nHorizon Shard":currencyTab,"Currency`r`nOrb of Binding":currencyTab,"Currency`r`nEngineer's Orb":currencyTab,"Currency`r`nAncient Orb":currencyTab,"Currency`r`nAncient Shard":currencyTab,"Currency`r`nBinding Shard":currencyTab,"Currency`r`nEngineer's Shard":currencyTab,"Currency`r`nHarbinger's Shard":currencyTab,"Currency`r`nHarbinger's Orb":currencyTab, "--------`r`nUnidentified":chaosRecipeTab, "Delirium Orb":newOrbs}
 
 startingTab := 1
 currentTab := 1
@@ -51,30 +53,67 @@ ySize := (y2-y1)/4
 i := 0
 j := 0
 
+stopScript := 0
+
+
+
+~^+LButton::
+    while GetKeyState("LButton", "P")
+        Send, {Ctrl Down}{Click}{Ctrl up}
+return
 
 ^Space::
+    BlockInput, On
+    BlockInput, MouseMove
+
     Sleep, 500
     currentTab := GoToTab(1, 50) ; Go left 50 times in case the stash isn't on the leftmost tab.
     Loop, 5 {
         Loop, 12 {
+            if (stopScript) {
+                Break
+            }
+            clipboard := ""
             MouseMove, (x1 + (j * xSize)), (y1 + (i * ySize)), 0
             Random, sleeperOffset, 0, jitterMaxMS
             Sleep, baseSpeedMS + sleeperOffset
             send, ^c
             Sleep, baseSpeedMS + sleeperOffset
             copiedText = %Clipboard%
-            clipboard := ""
-            For k, v in stash {
-                found := InStr(copiedText, k)
-                if(found){
-                    if(!v){
+            if(copiedText){
+                found := 0
+                For k, v in stashTabDefinitions {
+                    found := InStr(copiedText, k)
+                    if(found){
+                        if(!v){
+                            Break
+                        }
+                        ; Check if item is rare and ilvl at least 60
+                        if(v == chaosRecipeTab){
+                            if(!Instr(copiedText, "Rarity: Rare")){
+                                Break
+                            }
+                            RegExMatch(copiedText, "Item Level: [0-9]+", match)
+                            if ( SubStr(match, 12) < 60) { 
+                                v = %dumpTab%
+                            }
+                        }
+                        ; MsgBox, %v% %k%
+                        currentTab := GoToTab(v, currentTab)
+                        Send, {Ctrl Down}{Click}{Ctrl up}
+                        Sleep, baseSpeedMS + sleeperOffset
                         Break
-                    }
-                    ; MsgBox, %v% %k%
-                    currentTab := GoToTab(v, currentTab)
+                    } 
+                }
+                if (!found && InStr(copiedText, "Rarity: Currency")){
+                    currentTab := GoToTab(currencyTab, currentTab)
                     Send, {Ctrl Down}{Click}{Ctrl up}
                     Sleep, baseSpeedMS + sleeperOffset
-                    Break
+                }
+                if (dumpTab && !found) {
+                    currentTab := GoToTab(dumpTab, currentTab)
+                    Send, {Ctrl Down}{Click}{Ctrl up}
+                    Sleep, baseSpeedMS + sleeperOffset
                 }
             }
             
@@ -87,17 +126,13 @@ j := 0
     }
     i = 0
     
-    ; 
-    ; MsgBox, %copiedText%
-    ; currentTab := GoToTab(4,currentTab)
-    Loop, 60 {
+    BlockInput, MouseMoveOff
+    BlockInput, Off
+    currentTab := GoToTab(1, currentTab)
+    stopScript := 0
+return
 
-    }
-
-    return
-
-GoToTab(target,current)
-{
+GoToTab(target,current){
     if(target == current){
         return current
     } else if (target < current){
@@ -108,3 +143,11 @@ GoToTab(target,current)
         return GoToTab(target,current+1)
     }
 }
+
+~^s::
+    Reload
+return
+
+~Escape::
+    stopScript := 1
+return
