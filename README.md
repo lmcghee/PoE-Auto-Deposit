@@ -1,5 +1,10 @@
 # PoE-Auto-Deposit
 
+# DEPRECATION NOTICE
+Due to the release of stash page affinities, this project has been replaced by in-game functionality. It _should_ still work but this project will no longer be maintained. It will be left here for reference while it gathers dust. Feel free to ask questions, clone, or whatever you like.
+
+---
+
 ## Description
 Simple auto hotkey script to deposit all items from inventory into their designated stash tabs <br>
 Set up by default for 1440p resolution, you will need to change some minor variables to get going.
